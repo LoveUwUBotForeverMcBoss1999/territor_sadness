@@ -135,26 +135,25 @@
     }
 
     .team-members {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      justify-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center; /* Centers all cards within the section */
     }
 
     .team-member {
-
         background-color: rgba(0, 0, 0, 0.6); /* Darker background */
-        width: 240px; /* Set a fixed width */
-        height: 250px; /* Slightly higher than a square */
+        width: 240px;
+        height: 250px;
         padding: 1.5rem;
         border-radius: 8px;
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around; /* Centers content within the card */
+        justify-content: space-around;
         transition: transform 0.3s ease;
-        overflow: hidden; /* Ensures content does not overflow */
+        overflow: hidden;
     }
 
 
@@ -227,8 +226,8 @@
     }
 
     .partner-card img {
-      width: 60px;
-      height: 60px;
+      width: 150px;
+      height: 150px;
       margin-bottom: 1rem;
     }
 
@@ -301,7 +300,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
-      <h1>Welcome to Territory of SadNess</h1>
+        <h1>Welcome to <span style="background: linear-gradient(to right, #ff0000, #ff7f7f); -webkit-background-clip: text; color: transparent;">Territory of SadNess</span></h1>
       <p>Join our dynamic gaming community and explore exciting collaborations!</p>
       <a href="https://discord.gg/adYndRmWmH" class="cta">Join Now</a>
     </section>
@@ -315,96 +314,99 @@
     </section>
 
     <!-- Team Section -->
-    <section class="team">
-      <h2>Our Team</h2>
-      <div class="team-members">
-        <div class="team-member">
-            <img src="https://territory-of-sadness.uwubot.online/avatars/notxiaoeden.png" alt="notxiaoeden">
-            <h3>NotXiaoeden</h3>
-        </div>
-        <div class="team-member">
-            <img src="https://territory-of-sadness.uwubot.online/avatars/mcboss_99.png" alt="mcboss_99">
-            <h3>McBoss_99</h3>
-        </div>
-        <div class="team-member">
-          <img src="https://territory-of-sadness.uwubot.online/avatars/dula_xb.png" alt="dula_xb">
-          <h3>Dula_Xb</h3>
-        </div>
-        <div class="team-member">
-          <img src="https://territory-of-sadness.uwubot.online/avatars/gaganalk.png" alt="gaganalk">
-          <h3>Gaganalk</h3>
-        </div>
-        <div class="team-member">
-          <img src="https://territory-of-sadness.uwubot.online/avatars/mj_tomboy.png" alt="mj_tomboy">
-          <h3>Mj_Tomboy</h3>
-        </div>
-        <div class="team-member">
-          <img src="https://territory-of-sadness.uwubot.online/avatars/gd_dream21.png" alt="gd_dream21">
-          <h3>Gd_Dream21</h3>
-        </div>
-        <div class="team-member">
-          <img src="https://territory-of-sadness.uwubot.online/avatars/kavi_zerr730.png" alt="kavi_zerr730">
-          <h3>Kavi_Zerr730</h3>
-        </div>
-        <div class="team-member">
-          <img src="https://territory-of-sadness.uwubot.online/avatars/bedless080.png" alt="bedless080">
-          <h3>Bedless080</h3>
-        </div>
-        <div class="team-member">
-          <img src="https://territory-of-sadness.uwubot.online/avatars/kumbiya1020.png" alt="kumbiya1020">
-          <h3>Kumbiya1020</h3>
-        </div>
-        <div class="team-member">
-          <img src="https://territory-of-sadness.uwubot.online/avatars/darkshadowsl11.png" alt="darkshadowsl11">
-          <h3>DarkshadowSL11</h3>
-        </div>
-        <div class="team-member">
-          <img src="https://territory-of-sadness.uwubot.online/avatars/m.s.m.daham.png" alt="m.s.m.daham">
-          <h3>M.S.M.Daham</h3>
-        </div>
-        <div class="team-member">
-          <img src="https://territory-of-sadness.uwubot.online/avatars/shadowexplorer09.png" alt="shadowexplorer09">
-          <h3>Shadowexplorer09</h3>
-        </div>
-        <div class="team-member">
-          <img src="https://territory-of-sadness.uwubot.online/avatars/devil_dhissa.png" alt="devil_dhissa">
-          <h3>Devil_Dhissa</h3>
-        </div>
-        <div class="team-member">
-          <img src="https://territory-of-sadness.uwubot.online/avatars/itssesath.png" alt="itssesath">
-          <h3>Itssesath</h3>
-        </div>
-        <div class="team-member">
-          <img src="https://territory-of-sadness.uwubot.online/avatars/3nukx.png" alt="3nukx">
-          <h3>3Nukx</h3>
-        </div>
-        <div class="team-member">
-          <img src="https://territory-of-sadness.uwubot.online/avatars/sethikaomg.png" alt="sethikaomg">
-          <h3>SethikaOMG</h3>
-        </div>
-        <div class="team-member">
-          <img src="https://territory-of-sadness.uwubot.online/avatars/lord_xiao..png" alt="lord_xiao.">
-          <h3>Lord_Xiao.</h3>
-        </div>
-        <div class="team-member">
-          <img src="https://territory-of-sadness.uwubot.online/avatars/robloxmario.png" alt="robloxmario">
-          <h3>RobloxMario</h3>
-        </div>
-        <div class="team-member">
-          <img src="https://territory-of-sadness.uwubot.online/avatars/narayana8585.png" alt="narayana8585">
-          <h3>Narayana8585</h3>
-        </div>
-        <div class="team-member">
-          <img src="https://territory-of-sadness.uwubot.online/avatars/notsadterrorking.png" alt="notsadterrorking">
-          <h3>NotSadTerrorKing</h3>
-        </div>
-        <div class="team-member">
-          <img src="https://territory-of-sadness.uwubot.online/avatars/lazybirdofficialyt.png" alt="lazybirdofficialyt">
-          <h3>LazyBirdOfficialYT</h3>
-        </div>
+    <!-- Updated Team Section -->
+<section class="team">
+    <h2>Our Team</h2>
+    <div class="team-members">
+      <!-- Begin Updated Team Members -->
+  
+      <div class="team-member" style="border: 2px solid #ffc400;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/notsadterrorking.png" alt="notsadterrorking">
+        <h3>NotSadTerrorKing</h3>
+        <p style="color: #ffc400;">Founder</p>
       </div>
+
+      <div class="team-member" style="border: 2px solid #ff0000;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/notxiaoeden.png" alt="notxiaoeden">
+        <h3>NotXiaoeden</h3>
+        <p style="color: #ff0000;">Head Admin</p>
       </div>
-    </section>
+
+      <div class="team-member" style="border: 2px solid #ff0000;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/mcboss_99.png" alt="mcboss_99">
+        <h3>McBoss_99</h3>
+        <p style="color: #ff0000;">Head Developer</p>
+      </div>
+
+      <div class="team-member" style="border: 2px solid #00ff00;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/dula_xb.png" alt="dula_xb">
+        <h3>Dula_XB</h3>
+        <p style="color: #00ff00;">Admin</p>
+      </div>
+      
+      <div class="team-member" style="border: 2px solid #8a2be2;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/mj_tomboy.png" alt="mj_tomboy">
+        <h3>Mj_Tomboy</h3>
+        <p style="color: #8a2be2;">Higher Staff</p>
+      </div>
+  
+      <div class="team-member" style="border: 2px solid #c8a6ee;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/gd_dream21.png" alt="gd_dream21">
+        <h3>GD_Dream21</h3>
+        <p style="color: #c8a6ee;">Staff</p>
+      </div>
+  
+      <div class="team-member" style="border: 2px solid #00ff00;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/kavi_zerr730.png" alt="kavi_zerr730">
+        <h3>Kavi_Zerr730</h3>
+        <p style="color: #00ff00;">Admin</p>
+      </div>
+  
+      <div class="team-member" style="border: 2px solid #c8a6ee;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/bedless080.png" alt="bedless080">
+        <h3>Bedless080</h3>
+        <p style="color: #c8a6ee;">Staff</p>
+      </div>
+  
+      <div class="team-member" style="border: 2px solid #00ff00;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/kumbiya1020.png" alt="kumbiya1020">
+        <h3>Kumbiya1020</h3>
+        <p style="color: #00ff00;">Admin</p>
+      </div>
+  
+      <div class="team-member" style="border: 2px solid #8a2be2;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/darkshadowsl11.png" alt="darkshadowsl11">
+        <h3>DarkShadowSL11</h3>
+        <p style="color: #8a2be2;">Higher Staff</p>
+      </div>
+    
+      <div class="team-member" style="border: 2px solid #8a2be2;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/sethikaomg.png" alt="sethikaomg">
+        <h3>SethikaOMG</h3>
+        <p style="color: #8a2be2;">Higher Staff</p>
+      </div>
+  
+      <div class="team-member" style="border: 2px solid #8a2be2;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/lord_xiao..png" alt="lord_xiao.">
+        <h3>Lord_Xiao.</h3>
+        <p style="color: #8a2be2;">Higher Staff</p>
+      </div>
+  
+      <div class="team-member" style="border: 2px solid #8a2be2;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/robloxmario.png" alt="robloxmario">
+        <h3>RobloxMario</h3>
+        <p style="color: #8a2be2;">Higher Staff</p>
+      </div>
+  
+      <div class="team-member" style="border: 2px solid #df8989;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/lazybirdofficialyt.png" alt="lazybirdofficialyt">
+        <h3>LazyBirdOfficialYT</h3>
+        <p style="color: #df8989;">Friendly Youtuber<br>(Special Guest)</p>
+      </div>
+      <!-- End Updated Team Members -->
+    </div>
+  </section>
+  
 
     <!-- Partners Section -->
     <section class="partners" style="margin-left: 10px; margin-right: 10px;">
