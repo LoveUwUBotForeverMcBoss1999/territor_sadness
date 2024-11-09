@@ -1,0 +1,502 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1f2029;
+    color: #f2f2f2;
+    overflow-x: hidden;
+  }
+
+  /* Backgrounds and Overlays */
+  .bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://territory-of-sadness.uwubot.online/bg.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  .bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 32, 41, 0.85);
+    z-index: -1;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  /* Header and Hero */
+  header {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .logo img {
+    max-height: 200px;
+    border-radius: 50%;
+    animation: fadeIn 1.5s ease forwards;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 4rem 0;
+    color: #f2f2f2;
+    animation: fadeIn 1.2s ease forwards;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta {
+    display: inline-block;
+    background-color: #7289da;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .cta:hover {
+    background-color: #5b6eae;
+    transform: scale(1.05);
+  }
+
+/* About Section */
+.about {
+    background-color: rgba(31, 32, 41, 0.50); /* Semi-transparent background */
+    padding: 4rem 2rem; /* Padding for spacing */
+    text-align: center;
+    border-radius: 12px; /* Rounded corners */
+    max-width: 800px; /* Set a max width for better readability */
+    margin: 0 auto; /* Center the section */
+}
+
+
+  .about h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  .about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 1.2s ease 0.5s forwards;
+  }
+
+  /* Team Section */
+  .team {
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .team h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  .team-members {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center; /* Centers all cards within the section */
+  }
+
+  .team-member {
+      background-color: rgba(0, 0, 0, 0.6); /* Darker background */
+      width: 240px;
+      height: 250px;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transition: transform 0.3s ease;
+      overflow: hidden;
+  }
+
+
+  .team-member:hover {
+    transform: scale(1.05);
+  }
+
+  .team-member img {
+      width: 80px; /* Set a specific size to fit within the fixed card */
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+      transition: transform 0.3s ease;
+  }
+
+
+  .team-member:hover img {
+    transform: scale(1.1);
+  }
+
+  .team-member h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+
+  .team-member p {
+      font-size: 1.1rem;
+      color: #eba5a5;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+
+
+  /* Partners Section */
+  .partners {
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .partners h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  .partner-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+  }
+
+  .partner-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .partner-card:hover {
+    transform: scale(1.05);
+  }
+
+  .partner-card img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1rem;
+  }
+
+  .partner-card h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .partner-card p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 1.5rem;
+  }
+
+  .partner-card a {
+    display: inline-block;
+    background-color: #7289da;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .partner-card a:hover {
+    background-color: #5b6eae;
+  }
+
+  /* Footer */
+  footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ccc;
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .hero p { font-size: 1.2rem; }
+    .team-members, .partner-cards { grid-template-columns: 1fr; }
+  }
+
+
+
+  /* -------------SLIDE NAV BAR ------------------*/
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 30%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: auto;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 0 15px 15px 0;
+    transition: width 0.3s ease;
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+/* Remove hover expansion */
+.sidebar.active {
+    width: 200px;
+}
+
+.sidebar .toggle-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.sidebar .hamburger {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.sidebar .hamburger:before,
+.sidebar .hamburger:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.sidebar .hamburger:before {
+    top: -6px;
+}
+
+.sidebar .hamburger:after {
+    bottom: -6px;
+}
+
+.sidebar.active .hamburger {
+    background: transparent;
+}
+
+.sidebar.active .hamburger:before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.sidebar.active .hamburger:after {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+.sidebar ul {
+    padding: 0;
+    margin: 30px 0 0 0;
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 10px 15px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sidebar ul li a i {
+    font-size: 20px;
+    min-width: 30px;
+    text-align: center;
+}
+
+.sidebar ul li a span {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sidebar.active ul li a span {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar ul li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.sidebar ul li:hover i {
+    animation: pulse 0.5s ease;
+}
+
+/* Add specific mobile styles */
+/* Updated mobile styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .team-members {
+        padding: 0 1rem;
+    }
+
+    .team-member {
+        width: 100%;
+        max-width: 240px;
+        margin: 0 auto;
+    }
+
+    /* Adjust sidebar for mobile */
+    .sidebar {
+        width: 50px; /* Slightly smaller on mobile */
+    }
+
+    .sidebar.active {
+        width: 180px; /* Slightly smaller when expanded on mobile */
+    }
+
+    /* Ensure content doesn't overflow */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+
+
+/*======================Events Page=====================*/
+/* Events Section */
+.events {
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .events h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  
+  .event-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .event-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 240px;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .event-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .event-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .event-card p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+  }
+  
+  .event-card .cta {
+    display: inline-block;
+    background-color: #7289da;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .event-card .cta:hover {
+    background-color: #5b6eae;
+  }
+  

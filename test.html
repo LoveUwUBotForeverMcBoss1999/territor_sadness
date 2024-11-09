@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Territory of SadNess - Gaming Guild</title>
+
+  <!-- Meta Preview -->
+  <meta property="og:title" content="Territory of SadNess - Gaming Guild">
+  <meta property="og:description" content="Join our dynamic gaming community and explore exciting collaborations!">
+  <meta property="og:image" content="https://territory-of-sadness.uwubot.online/icon.gif">
+  <meta property="og:url" content="https://territory-of-sadness.uwubot.online">
+
+  <!-- Page Icon -->
+  <link rel="icon" href="https://territory-of-sadness.uwubot.online/icon.gif" type="image/gif">
+
+  <!-- Fonts and Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1f2029;
+      color: #f2f2f2;
+      overflow-x: hidden;
+    }
+
+    /* Backgrounds and Overlays */
+    .bg-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://territory-of-sadness.uwubot.online/bg.gif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    .bg-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(31, 32, 41, 0.85);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* Header and Hero */
+    header {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .logo img {
+      max-height: 200px;
+      border-radius: 50%;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 0;
+      color: #f2f2f2;
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta {
+      display: inline-block;
+      background-color: #7289da;
+      color: #fff;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .cta:hover {
+      background-color: #5b6eae;
+      transform: scale(1.05);
+    }
+
+    /* About Section */
+    .about {
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .about p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      animation: fadeInUp 1.2s ease 0.5s forwards;
+    }
+
+    /* Team Section */
+    .team {
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .team h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .team-members {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center; /* Centers all cards within the section */
+    }
+
+    .team-member {
+        background-color: rgba(0, 0, 0, 0.6); /* Darker background */
+        width: 240px;
+        height: 250px;
+        padding: 1.5rem;
+        border-radius: 8px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transition: transform 0.3s ease;
+        overflow: hidden;
+    }
+
+
+    .team-member:hover {
+      transform: scale(1.05);
+    }
+
+    .team-member img {
+        width: 80px; /* Set a specific size to fit within the fixed card */
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 0.5rem;
+        transition: transform 0.3s ease;
+    }
+
+
+    .team-member:hover img {
+      transform: scale(1.1);
+    }
+
+    .team-member h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .team-member p {
+        font-size: 1.1rem;
+        color: #eba5a5;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    /* Partners Section */
+    .partners {
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .partners h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .partner-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+    }
+
+    .partner-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .partner-card:hover {
+      transform: scale(1.05);
+    }
+
+    .partner-card img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 1rem;
+    }
+
+    .partner-card h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .partner-card p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 1.5rem;
+    }
+
+    .partner-card a {
+      display: inline-block;
+      background-color: #7289da;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .partner-card a:hover {
+      background-color: #5b6eae;
+    }
+
+    /* Footer */
+    footer {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #ccc;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero p { font-size: 1.2rem; }
+      .team-members, .partner-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background -->
+  <div class="bg-image"></div>
+  <div class="bg-overlay"></div>
+
+  <!-- Container -->
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="https://territory-of-sadness.uwubot.online/icon.gif" alt="Territory of SadNess">
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to <span style="background: linear-gradient(to right, #ff0000, #ff7f7f); -webkit-background-clip: text; color: transparent;">Territory of SadNess</span></h1>
+      <p>Join our dynamic gaming community and explore exciting collaborations!</p>
+      <a href="https://discord.gg/adYndRmWmH" class="cta">Join Now</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <h2>About Us</h2>
+      <p>We are a vibrant gaming community that brings together like-minded players to engage, compete, and grow. Our Discord server offers events, team-ups, and more!</p>
+      <br>
+      <iframe src="https://discord.com/widget?id=1221367388814184479&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    </section>
+
+    <!-- Team Section -->
+    <!-- Updated Team Section -->
+<section class="team">
+    <h2>Our Team</h2>
+    <div class="team-members">
+      <!-- Begin Updated Team Members -->
+  
+      <div class="team-member" style="border: 2px solid #ffc400;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/notsadterrorking.png" alt="notsadterrorking">
+        <h3>NotSadTerrorKing</h3>
+        <p style="color: #ffc400;">Founder</p>
+      </div>
+
+      <div class="team-member" style="border: 2px solid #ff0000;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/notxiaoeden.png" alt="notxiaoeden">
+        <h3>NotXiaoeden</h3>
+        <p style="color: #ff0000;">Head Admin</p>
+      </div>
+
+      <div class="team-member" style="border: 2px solid #ff0000;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/mcboss_99.png" alt="mcboss_99">
+        <h3>McBoss_99</h3>
+        <p style="color: #ff0000;">Head Developer</p>
+      </div>
+
+      <div class="team-member" style="border: 2px solid #00ff00;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/dula_xb.png" alt="dula_xb">
+        <h3>Dula_XB</h3>
+        <p style="color: #00ff00;">Admin</p>
+      </div>
+      
+      <div class="team-member" style="border: 2px solid #8a2be2;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/mj_tomboy.png" alt="mj_tomboy">
+        <h3>Mj_Tomboy</h3>
+        <p style="color: #8a2be2;">Higher Staff</p>
+      </div>
+  
+      <div class="team-member" style="border: 2px solid #c8a6ee;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/gd_dream21.png" alt="gd_dream21">
+        <h3>GD_Dream21</h3>
+        <p style="color: #c8a6ee;">Staff</p>
+      </div>
+  
+      <div class="team-member" style="border: 2px solid #00ff00;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/kavi_zerr730.png" alt="kavi_zerr730">
+        <h3>Kavi_Zerr730</h3>
+        <p style="color: #00ff00;">Admin</p>
+      </div>
+  
+      <div class="team-member" style="border: 2px solid #00ff00;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/kumbiya1020.png" alt="kumbiya1020">
+        <h3>Kumbiya1020</h3>
+        <p style="color: #00ff00;">Admin</p>
+      </div>
+  
+      <div class="team-member" style="border: 2px solid #8a2be2;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/darkshadowsl11.png" alt="darkshadowsl11">
+        <h3>DarkShadowSL11</h3>
+        <p style="color: #8a2be2;">Higher Staff</p>
+      </div>
+    
+      <div class="team-member" style="border: 2px solid #8a2be2;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/sethikaomg.png" alt="sethikaomg">
+        <h3>SethikaOMG</h3>
+        <p style="color: #8a2be2;">Higher Staff</p>
+      </div>
+  
+      <div class="team-member" style="border: 2px solid #8a2be2;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/lord_xiao..png" alt="lord_xiao.">
+        <h3>Lord_Xiao.</h3>
+        <p style="color: #8a2be2;">Higher Staff</p>
+      </div>
+  
+      <div class="team-member" style="border: 2px solid #8a2be2;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/robloxmario.png" alt="robloxmario">
+        <h3>RobloxMario</h3>
+        <p style="color: #8a2be2;">Higher Staff</p>
+      </div>
+  
+      <div class="team-member" style="border: 2px solid #df8989;">
+        <img src="https://territory-of-sadness.uwubot.online/avatars/lazybirdofficialyt.png" alt="lazybirdofficialyt">
+        <h3>LazyBirdOfficialYT</h3>
+        <p style="color: #df8989;">Friendly Youtuber<br>(Special Guest)</p>
+      </div>
+      <!-- End Updated Team Members -->
+    </div>
+  </section>
+  
+
+    <!-- Partners Section -->
+    <section class="partners" style="margin-left: 10px; margin-right: 10px;">
+      <h2>Partner Servers</h2>
+      <div class="partner-cards">
+        <!-- Partner 1 -->
+        <div class="partner-card">
+          <img src="https://uwubot.online/img/ESL_text.jpg" alt="Partner 1">
+          <h3>Event Space Lounge</h3>
+          <p>Welcome to <strong>Event Space Lounge</strong>, a gaming community built for all gamers and creators! Here, we’re all about having fun, connecting with others, and enjoying the games we love. From <strong>Minecraft</strong> to <strong>Among Us</strong> and beyond, we have it all. 🎮</p>
+          <a href="https://discord.gg/jDzTzWZZ76">Join Partner</a>
+        </div>
+        <div class="partner-card">
+            <img src="https://territory-of-sadness.uwubot.online/img/Aurex.png" alt="Partner 1">
+            <h3>Aurex LK</h3>
+            <p>Sri Lanka’s Top Choice for Reliable & Affordable Hosting Solutions.</p>
+            <a href="https://discord.gg/aurex">Join Partner</a>
+          </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Territory of SadNess | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
