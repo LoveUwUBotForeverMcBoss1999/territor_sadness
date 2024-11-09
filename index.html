@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Territory of SadNess - Gaming Guild</title>
+
+  <!-- Meta Preview -->
+  <meta property="og:title" content="Territory of SadNess - Gaming Guild">
+  <meta property="og:description" content="Join our dynamic gaming community and explore exciting collaborations!">
+  <meta property="og:image" content="https://territory-of-sadness.uwubot.online/icon.gif">
+  <meta property="og:url" content="https://territory-of-sadness.uwubot.online">
+
+  <!-- Page Icon -->
+  <link rel="icon" href="https://territory-of-sadness.uwubot.online/icon.gif" type="image/gif">
+
+  <!-- Fonts and Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1f2029;
+      color: #f2f2f2;
+      overflow-x: hidden;
+    }
+
+    /* Backgrounds and Overlays */
+    .bg-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://territory-of-sadness.uwubot.online/bg.gif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    .bg-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(31, 32, 41, 0.85);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* Header and Hero */
+    header {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .logo img {
+      max-height: 60px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 0;
+      color: #f2f2f2;
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta {
+      display: inline-block;
+      background-color: #7289da;
+      color: #fff;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .cta:hover {
+      background-color: #5b6eae;
+      transform: scale(1.05);
+    }
+
+    /* About Section */
+    .about {
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .about p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      animation: fadeInUp 1.2s ease 0.5s forwards;
+    }
+
+    /* Team Section */
+    .team {
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .team h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .team-members {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+    }
+
+    .team-member {
+
+        background-color: rgba(0, 0, 0, 0.6); /* Darker background */
+        width: 240px; /* Set a fixed width */
+        height: 310px; /* Slightly higher than a square */
+        padding: 1.5rem;
+        border-radius: 8px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around; /* Centers content within the card */
+        transition: transform 0.3s ease;
+        overflow: hidden; /* Ensures content does not overflow */
+    }
+
+
+    .team-member:hover {
+      transform: scale(1.05);
+    }
+
+    .team-member img {
+        width: 80px; /* Set a specific size to fit within the fixed card */
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 0.5rem;
+        transition: transform 0.3s ease;
+    }
+
+
+    .team-member:hover img {
+      transform: scale(1.1);
+    }
+
+    .team-member h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .team-member p {
+        font-size: 1.1rem;
+        color: #eba5a5;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    /* Partners Section */
+    .partners {
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .partners h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .partner-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+    }
+
+    .partner-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .partner-card:hover {
+      transform: scale(1.05);
+    }
+
+    .partner-card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1rem;
+    }
+
+    .partner-card h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .partner-card p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 1.5rem;
+    }
+
+    .partner-card a {
+      display: inline-block;
+      background-color: #7289da;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .partner-card a:hover {
+      background-color: #5b6eae;
+    }
+
+    /* Footer */
+    footer {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #ccc;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero p { font-size: 1.2rem; }
+      .team-members, .partner-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background -->
+  <div class="bg-image"></div>
+  <div class="bg-overlay"></div>
+
+  <!-- Container -->
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="https://territory-of-sadness.uwubot.online/icon.gif" alt="Territory of SadNess">
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Welcome to Territory of SadNess</h1>
+      <p>Join our dynamic gaming community and explore exciting collaborations!</p>
+      <a href="https://discord.gg/adYndRmWmH" class="cta">Join Now</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <h2>About Us</h2>
+      <p>We are a vibrant gaming community that brings together like-minded players to engage, compete, and grow. Our Discord server offers events, team-ups, and more!</p>
+      <br>
+      <iframe src="https://discord.com/widget?id=1221367388814184479&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+      <h2>Our Team</h2>
+      <div class="team-members">
+        <div class="team-member">
+            <img src="https://territory-of-sadness.uwubot.online/avatars/notxiaoeden.png" alt="notxiaoeden">
+            <h3>NotXiaoeden</h3>
+            <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+            <img src="https://territory-of-sadness.uwubot.online/avatars/mcboss_99.png" alt="mcboss_99">
+            <h3>McBoss_99</h3>
+            <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+          <img src="https://territory-of-sadness.uwubot.online/avatars/dula_xb.png" alt="dula_xb">
+          <h3>Dula_Xb</h3>
+          <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+          <img src="https://territory-of-sadness.uwubot.online/avatars/gaganalk.png" alt="gaganalk">
+          <h3>Gaganalk</h3>
+          <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+          <img src="https://territory-of-sadness.uwubot.online/avatars/mj_tomboy.png" alt="mj_tomboy">
+          <h3>Mj_Tomboy</h3>
+          <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+          <img src="https://territory-of-sadness.uwubot.online/avatars/gd_dream21.png" alt="gd_dream21">
+          <h3>Gd_Dream21</h3>
+          <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+          <img src="https://territory-of-sadness.uwubot.online/avatars/kavi_zerr730.png" alt="kavi_zerr730">
+          <h3>Kavi_Zerr730</h3>
+          <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+          <img src="https://territory-of-sadness.uwubot.online/avatars/bedless080.png" alt="bedless080">
+          <h3>Bedless080</h3>
+          <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+          <img src="https://territory-of-sadness.uwubot.online/avatars/kumbiya1020.png" alt="kumbiya1020">
+          <h3>Kumbiya1020</h3>
+          <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+          <img src="https://territory-of-sadness.uwubot.online/avatars/darkshadowsl11.png" alt="darkshadowsl11">
+          <h3>DarkshadowSL11</h3>
+          <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+          <img src="https://territory-of-sadness.uwubot.online/avatars/m.s.m.daham.png" alt="m.s.m.daham">
+          <h3>M.S.M.Daham</h3>
+          <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+          <img src="https://territory-of-sadness.uwubot.online/avatars/shadowexplorer09.png" alt="shadowexplorer09">
+          <h3>Shadowexplorer09</h3>
+          <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+          <img src="https://territory-of-sadness.uwubot.online/avatars/devil_dhissa.png" alt="devil_dhissa">
+          <h3>Devil_Dhissa</h3>
+          <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+          <img src="https://territory-of-sadness.uwubot.online/avatars/itssesath.png" alt="itssesath">
+          <h3>Itssesath</h3>
+          <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+          <img src="https://territory-of-sadness.uwubot.online/avatars/3nukx.png" alt="3nukx">
+          <h3>3Nukx</h3>
+          <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+          <img src="https://territory-of-sadness.uwubot.online/avatars/sethikaomg.png" alt="sethikaomg">
+          <h3>SethikaOMG</h3>
+          <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+          <img src="https://territory-of-sadness.uwubot.online/avatars/lord_xiao..png" alt="lord_xiao.">
+          <h3>Lord_Xiao.</h3>
+          <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+          <img src="https://territory-of-sadness.uwubot.online/avatars/robloxmario.png" alt="robloxmario">
+          <h3>RobloxMario</h3>
+          <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+          <img src="https://territory-of-sadness.uwubot.online/avatars/narayana8585.png" alt="narayana8585">
+          <h3>Narayana8585</h3>
+          <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+          <img src="https://territory-of-sadness.uwubot.online/avatars/notsadterrorking.png" alt="notsadterrorking">
+          <h3>NotSadTerrorKing</h3>
+          <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+        <div class="team-member">
+          <img src="https://territory-of-sadness.uwubot.online/avatars/lazybirdofficialyt.png" alt="lazybirdofficialyt">
+          <h3>LazyBirdOfficialYT</h3>
+          <p style="color: purple;">Essence Of Divine Assistance</p>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners" style="margin-left: 10px; margin-right: 10px;">
+      <h2>Partner Servers</h2>
+      <div class="partner-cards">
+        <!-- Partner 1 -->
+        <div class="partner-card">
+          <img src="https://event-space-lounge.uwubot.online/avatars/eden.gif" alt="Partner 1">
+          <h3>Partner Guild 1</h3>
+          <p>A great place to collaborate and explore gaming fun together.</p>
+          <a href="https://discord.gg/partner1">Join Partner</a>
+        </div>
+        <div class="partner-card">
+            <img src="https://event-space-lounge.uwubot.online/avatars/eden.gif" alt="Partner 1">
+            <h3>Partner Guild 1</h3>
+            <p>A great place to collaborate and explore gaming fun together.</p>
+            <a href="https://discord.gg/partner1">Join Partner</a>
+          </div>
+          <div class="partner-card">
+            <img src="https://event-space-lounge.uwubot.online/avatars/eden.gif" alt="Partner 1">
+            <h3>Partner Guild 1</h3>
+            <p>A great place to collaborate and explore gaming fun together.</p>
+            <a href="https://discord.gg/partner1">Join Partner</a>
+          </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Territory of SadNess | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
